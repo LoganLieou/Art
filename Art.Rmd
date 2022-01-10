@@ -1,0 +1,28 @@
+---
+title: "Art"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Interactively Visualizing Highly Complex Relational Datasets
+
+I can't even talk right now this is just so pretty just look at it. This is a force network which interactively visualizes, highly complex relational data, I may be able to use the same library / method to visualize something like a neural network or other data sets in the future but for now just wow.
+
+```{r, context="render", echo=FALSE}
+library(networkD3)
+
+# Load data
+data(MisLinks)
+data(MisNodes)
+
+# Plot
+forceNetwork(Links = MisLinks, Nodes = MisNodes,
+            Source = "source", Target = "target",
+            Value = "value", NodeID = "name",
+            Group = "group", opacity = 0.8)
+```
+
+This right here is just art + data, I don't know what else to say just look at it wow my actual brain so much serotonin.
